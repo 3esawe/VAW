@@ -1,0 +1,11 @@
+{% extends "header.html" %}
+
+{% block body %}
+{% if message %}
+{{ message }}
+{% else %}
+<p>
+	Error credintials 
+</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+{% if session['user_id'] | length ==0  %}
+	<p>Logged out succefully</p>
+
+{% else %}
+	<p1>{{ message }}</p1>
+	<p1>Success</p1>
+{% endif %}
+{% endblock %}

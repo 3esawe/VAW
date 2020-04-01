@@ -1,0 +1,12 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+
+<ul>
+	{% for row in rows %}
+		<li>Book Name: <a href="{{ url_for('details', title=row.title) }}">{{ row.title }}</a></li>
+	{% endfor %}
+</ul>
+
+{% endblock %}

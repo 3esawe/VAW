@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+{% extends "header.html" %}
+<body>
+	
+	<form action="{{ url_for('register')}}">
+		Username: <input type="username" name="username"><br>
+		E-mail: <input type='e-mail' name="email"><br>
+		Password: <input type="password" name="password">
+
+		<button>Register</button>
+	</form>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to our Book web app</title>
+	<script src="{{ url_for('static', filename='index.js') }}"></script>
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+</head>
+<header>
+	
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="{{ url_for('index') }}">Home <span class="sr-only">index</span></a>
+      <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+      <a class="nav-item nav-link" href="{{ url_for('search') }}">Search</a>
+      <a class="nav-item nav-link" href="{{ url_for('update') }}">Profile</a>
+      <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+    </div>
+  </div>
+</nav>
+	
+</header>
+<body>
+	<p>Change your account information</p>
+
+	<form action="{{ url_for('profile')}}" method="POST">
+		Enter yor username Username: <input id="name" type="username" name="username"><br>
+		Enter new email address
+		Email: <input type="email" name="email"><br>
+		<button>Update</button>
+	</form>
+	<div id="result"></div>
+
+</body>
+</html>
+
